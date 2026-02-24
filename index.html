@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Personal Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>My Profile 👤</h1>
+        <p>Personal Information & Registration Form</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Profile Section with Image and Personal Info -->
+        <section class="card">
+            <h2>About Me</h2>
+            <img src="images/MORINGA.jpeg" alt="My Photo" class="profile-image">
+            
+            <div class="profile-info">
+                <p><strong>📍 From:</strong> Wajir County</p>
+                <p><strong>📅 Date of Birth:</strong> 1 January 2004</p>
+                <p><strong>📞 Phone Number:</strong> 0724691120</p>
+                <p><strong>🪪 National ID:</strong> 42249297</p>
+                <p><strong>👨‍👩‍👧 Parent Name:</strong> Sharifa Hassan</p>
+            </div>
+        </section>
+
+        <!-- Registration Form -->
+        <section class="card">
+            <h2>Registration Form</h2>
+            <form class="registration-form">
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="enter your email" required>
+                </div>
+
+                <!-- Martial Status -->
+                <div class="form-group">
+                    <label for="martial-status">Martial Status</label>
+                    <select id="martial-status" name="martial-status" required>
+                        <option value="">Select your martial status</option>
+                        <option value="single">Single</option>
+                        <option value="married">Married</option>
+                        <option value="divorced">Divorced</option>
+                        <option value="widowed">Widowed</option>
+                    </select>
+                </div>
+
+                <!-- Gender -->
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Date of Birth -->
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Profile Page - Personal Information</p>
+    </footer>
+</body>
+</html>
+

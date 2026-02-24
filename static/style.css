@@ -1,0 +1,433 @@
+/* ============================================
+   BEGINNER'S CSS STYLESHEET
+   Simple and easy to understand!
+   ============================================ */
+
+/* --------------------------------------------
+   1. BASIC RESET
+   Remove default browser settings
+   -------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------
+   2. BODY STYLES
+   The main appearance of your page
+   -------------------------------------------- */
+body {
+    /* Font - what the text looks like */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* Text color */
+    color: #333;
+    
+    /* Line height - space between lines */
+    line-height: 1.6;
+    
+    /* Background color */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    
+    /* Minimum height */
+    min-height: 100vh;
+}
+
+/* --------------------------------------------
+   3. HEADER STYLES
+   The top part of the page
+   -------------------------------------------- */
+header {
+    /* Background color */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    
+    /* Text color */
+    color: white;
+    
+    /* Padding - space inside */
+    padding: 40px 20px;
+    
+    /* Center the text */
+    text-align: center;
+}
+
+header h1 {
+    /* Font size - how big the text is */
+    font-size: 2.5rem;
+    
+    /* Margin bottom - space below */
+    margin-bottom: 10px;
+}
+
+header p {
+    /* Font size */
+    font-size: 1.2rem;
+}
+
+/* --------------------------------------------
+   4. MAIN CONTENT AREA
+   The middle section
+   -------------------------------------------- */
+main {
+    /* Maximum width - don't get too wide */
+    max-width: 1200px;
+    
+    /* Center the content */
+    margin: 0 auto;
+    
+    /* Padding */
+    padding: 30px 20px;
+}
+
+/* --------------------------------------------
+   5. CARD STYLES
+   Boxes that hold content
+   -------------------------------------------- */
+.card {
+    /* White background */
+    background-color: white;
+    
+    /* Rounded corners */
+    border-radius: 15px;
+    
+    /* Shadow - makes it look 3D */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+    /* Padding inside */
+    padding: 25px;
+    
+    /* Margin - space between cards */
+    margin-bottom: 25px;
+}
+
+.card h2 {
+    /* Color */
+    color: #667eea;
+    
+    /* Size */
+    font-size: 1.5rem;
+    
+    /* Bottom margin */
+    margin-bottom: 15px;
+    
+    /* Bottom border line */
+    border-bottom: 2px solid #667eea;
+    
+    /* Padding below the border */
+    padding-bottom: 10px;
+}
+
+/* --------------------------------------------
+   6. PROFILE IMAGE STYLES
+   -------------------------------------------- */
+.profile-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #667eea;
+    margin: 20px auto;
+    display: block;
+}
+
+.profile-info {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.profile-info p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* --------------------------------------------
+   7. FORM STYLES
+   -------------------------------------------- */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+.submit-btn {
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* --------------------------------------------
+   8. LIST STYLES
+   Bulleted and numbered lists
+   -------------------------------------------- */
+ul, ol {
+    /* Left padding - indent the list */
+    padding-left: 25px;
+}
+
+li {
+    /* Space between items */
+    margin-bottom: 10px;
+}
+
+/* --------------------------------------------
+   9. LINK STYLES
+   How links look and behave
+   -------------------------------------------- */
+a {
+    /* Link color */
+    color: #667eea;
+    
+    /* No underline by default */
+    text-decoration: none;
+    
+    /* Transition - smooth color change */
+    transition: color 0.3s;
+}
+
+a:hover {
+    /* Color when hovering */
+    color: #764ba2;
+    
+    /* Underline when hovering */
+    text-decoration: underline;
+}
+
+/* Links container */
+.links {
+    /* Display inline-block for spacing */
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.links a {
+    /* Button-like appearance */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #667eea;
+    color: white;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.links a:hover {
+    background-color: #764ba2;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+/* --------------------------------------------
+   10. IMAGE STYLES
+   How images look
+   -------------------------------------------- */
+img {
+    /* Maximum width - responsive */
+    max-width: 100%;
+    
+    /* Height automatic */
+    height: auto;
+    
+    /* Rounded corners */
+    border-radius: 10px;
+    
+    /* Display block for proper spacing */
+    display: block;
+    
+    /* Center the image */
+    margin: 15px auto;
+}
+
+/* --------------------------------------------
+   11. FOOTER STYLES
+   The bottom section
+   -------------------------------------------- */
+footer {
+    /* Background color */
+    background-color: #2c3e50;
+    
+    /* Text color */
+    color: white;
+    
+    /* Padding */
+    padding: 20px;
+    
+    /* Center text */
+    text-align: center;
+    
+    /* Margin top */
+    margin-top: 30px;
+}
+
+/* --------------------------------------------
+   12. RESPONSIVE DESIGN
+   Making it look good on phones
+   -------------------------------------------- */
+@media (max-width: 600px) {
+    /* Changes for small screens */
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    .links {
+        flex-direction: column;
+    }
+    
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* --------------------------------------------
+   13. ALERT/STYLES
+   Flash messages
+   -------------------------------------------- */
+.alert {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* --------------------------------------------
+   14. VIEW USERS BUTTON
+   -------------------------------------------- */
+.view-users-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.view-users-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    text-decoration: none;
+}
+
+/* --------------------------------------------
+   15. BACK BUTTON
+   -------------------------------------------- */
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #667eea;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #764ba2;
+    text-decoration: none;
+}
+
+/* --------------------------------------------
+   16. USERS TABLE
+   -------------------------------------------- */
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.users-table th,
+.users-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.users-table th {
+    background-color: #667eea;
+    color: white;
+    font-weight: 600;
+}
+
+.users-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.users-table td {
+    font-size: 0.95rem;
+}
+
+.no-users {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 20px;
+}
+
+/* ============================================
+   END OF CSS
+   Congratulations on learning CSS! 🎉
+   ============================================ */
+

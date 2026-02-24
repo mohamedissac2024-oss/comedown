@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Users</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Registered Users 👥</h1>
+        <p>All users who have registered through the form</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Back Link -->
+        <section class="card">
+            <a href="{{ url_for('index') }}" class="back-btn">← Back to Form</a>
+        </section>
+
+        <!-- Users Table -->
+        <section class="card">
+            <h2>User List</h2>
+            
+            {% if users %}
+            <table class="users-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Martial Status</th>
+                        <th>Gender</th>
+                        <th>Date of Birth</th>
+                        <th>Registered At</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td>{{ user['id'] }}</td>
+                        <td>{{ user['full_name'] }}</td>
+                        <td>{{ user['email'] }}</td>
+                        <td>{{ user['martial_status'] }}</td>
+                        <td>{{ user['gender'] }}</td>
+                        <td>{{ user['date_of_birth'] }}</td>
+                        <td>{{ user['created_at'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <p class="no-users">No users registered yet.</p>
+            {% endif %}
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Registered Users - Admin Panel</p>
+    </footer>
+</body>
+</html>
+
